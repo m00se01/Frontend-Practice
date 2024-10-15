@@ -8,5 +8,5 @@
 ## Things to Improve on going forward
 - I think I need to review and refine my responsive design knowledge.
 - I think I rely more on flexbox to align things, and maybe I should be more cognisant of that and use other tools as well.
-- Spacing is another thing that is a bit challenging sometimes, I think i struggle a little bit when to use width/height or min-width/height or when to use padding and margin etc.
+- Spacing is another thing that is a bit challenging sometimes, I think i struggle a little bit on when to use width/height or min-width/height, and when to use padding and margin etc.
 
