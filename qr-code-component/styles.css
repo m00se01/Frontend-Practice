@@ -1,0 +1,89 @@
+:root {
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+
+  --white: hsl(0, 0%, 100%);
+
+  --mobile: 375px;
+  --desktop: 1440px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--slate-300);
+  height: 100%;
+  width: 100%;
+  font-family: "Outfit", sans-serif;
+}
+
+.qr-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-card {
+  width: 320px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 0em;
+}
+
+.qr-img {
+  width: 288px;
+  height: 288px;
+  border-radius: 10px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em 2em;
+  text-align: center;
+}
+
+.description h3 {
+  font-size: 22px;
+  line-height: 120%;
+  font-weight: 700;
+  color: var(--slate-900);
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.description p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  color: var(--slate-500);
+}
+
+@media (max-width: 375px) {
+  .qr-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .description p {
+    font-size: 12px;
+  }
+
+  .description h3 {
+    font-size: 18px;
+  }
+
+  .qr-card {
+    width: 288px;
+  }
+}
