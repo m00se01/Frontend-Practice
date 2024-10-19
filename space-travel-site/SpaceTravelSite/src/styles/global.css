@@ -85,6 +85,10 @@ img {
   display: block;
 }
 
+li {
+  list-style: none;
+}
+
 input,
 button,
 textarea,

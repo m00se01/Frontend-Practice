@@ -1,59 +1,81 @@
 import "../styles/navbar.css";
 import "../styles/global.css";
 import logo from "../assets/shared/logo.svg";
-import { Link } from "react-router-dom";
+import hamburgerIcon from "../assets/shared/icon-hamburger.svg";
+import hamburgerClose from "../assets/shared/icon-close.svg";
+import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 export const Navbar = ({ currActive }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [navigationType, setNavigationType] = useState("primary-navigation");
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    console.log("isMenuOpen: ", isMenuOpen);
+  };
+
   return (
-    <div className="navbar-wrapper">
-      <div className="logo">
-        <Link to="/">
-          <img src={logo} alt="star-logo" />
-        </Link>
-      </div>
+    <nav className="navbar">
+      <Link to="/" className="navbar-logo">
+        <img src={logo} className="logo" alt="star-logo" />
+      </Link>
 
       <div className="line-decoration"></div>
-      <button className="mobile-nav-button">Menu</button>
 
-      <nav>
-        <ul className="primary-navigation underline-indicators">
-          <li className={currActive === "home" ? "active" : ""}>
-            <Link
-              to="/"
-              className="uppercase text-white ff-sans-cond letter-spacing-1"
-              aria-selected={currActive === "home" ? "true" : "false"}
-            >
-              <span>00</span> Home
-            </Link>
-          </li>
-          <li className={currActive === "destination" ? "active" : ""}>
-            <Link
-              to="/destination"
-              className="uppercase text-white ff-sans-cond letter-spacing-1"
-              aria-selected={currActive === "destination" ? "true" : "false"}
-            >
-              <span>01</span> Destination
-            </Link>
-          </li>
-          <li className={currActive === "crew" ? "active" : ""}>
-            <Link
-              to="/crew"
-              className="uppercase text-white ff-sans-cond letter-spacing-1"
-              aria-selected={currActive === "crew" ? "true" : "false"}
-            >
-              <span>02</span> Crew
-            </Link>
-          </li>
-          <li className={currActive === "technology" ? "active" : ""}>
-            <Link
-              to="/technology"
-              className="uppercase text-white ff-sans-cond letter-spacing-1"
-              aria-selected={currActive === "technology" ? "true" : "false"}
-            >
-              <span>03</span> Technology
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <button onClick={toggleMenu} className="mobile-nav-button">
+        <img
+          src={isMenuOpen ? hamburgerClose : hamburgerIcon}
+          alt="hamburger menu button"
+        />
+      </button>
+
+      <ul
+        className={`nav-links ${
+          isMenuOpen ? "nav-links open" : ""
+        } underline-indicators`}
+      >
+        <li className="nav-item">
+          <NavLink
+            to="/"
+            className="uppercase text-white ff-sans-cond letter-spacing-1"
+            // onClick={closeMenu}
+          >
+            <span>00</span> Home
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            onClick={closeMenu}
+            to="/destination"
+            className="uppercase text-white ff-sans-cond letter-spacing-1"
+          >
+            <span>01</span> Destination
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            onClick={closeMenu}
+            to="/crew"
+            className="uppercase text-white ff-sans-cond letter-spacing-1"
+          >
+            <span>02</span> Crew
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            onClick={closeMenu}
+            to="/technology"
+            className="uppercase text-white ff-sans-cond letter-spacing-1"
+          >
+            <span>03</span> Technology
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 };
