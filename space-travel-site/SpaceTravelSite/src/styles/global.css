@@ -18,6 +18,25 @@
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
   --ff-sans-normal: "Barlow", sans-serif;
+
+  /* Spacing */
+
+  --sp-25: 0.125rem;
+  --sp-50: 0.25rem;
+  --sp-100: 0.5rem;
+  --sp-150: 0.75rem;
+  --sp-200: 1rem;
+  --sp-300: 1.5rem;
+  --sp-400: 2rem;
+  --sp-500: 2.5rem;
+  --sp-600: 3rem;
+  --sp-800: 4rem;
+  --sp-1000: 5rem;
+  --sp-1200: 6rem;
+  --sp-1600: 8rem;
+
+  --screen-lg: 90rem;
+  --screen-md: 48rem;
 }
 
 /* CSS Reset */
@@ -25,6 +44,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body,
@@ -55,6 +75,9 @@ body {
   background-color: hsl(var(--clr-dark));
   line-height: 1.5;
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  background-size: cover;
 }
 
 img {
@@ -99,9 +122,18 @@ select {
   max-width: 80rem;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 2em repeat(2, minmax(0px, 80rem)) 2em;
+.d-block {
+  display: block;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* Colors */
@@ -196,6 +228,11 @@ select {
 
 .underline-indicators > .active,
 .underline-indicators > [aria-selected="true"] {
-  color: hsl(var(--clr-white) / 1);
-  border-color: hsl(var(--clr-white) / 1);
+  color: hsl(var(--clr-white));
+  border-color: hsl(var(--clr-white));
+}
+
+/* Debug Border */
+.border {
+  border: 3px solid white;
 }

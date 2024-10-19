@@ -1,0 +1,30 @@
+@media (min-width: 90rem) {
+  .grid-container {
+    display: grid;
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      repeat(2, minmax(0, 80rem))
+      minmax(2rem, 1fr);
+    column-gap: var(--container-gap, 2rem);
+    margin: 0 var(--sp-1000);
+  }
+
+  .grid-container > *:first-child {
+    grid-column: 2;
+    place-content: center;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3;
+    place-content: center;
+    margin: 0 auto;
+  }
+
+  .home {
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+  }
+}
