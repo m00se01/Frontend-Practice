@@ -1,0 +1,54 @@
+.destinations-page {
+  display: grid;
+  grid-template-rows: 0.25fr 1fr;
+  background-size: cover;
+  background-position: center left;
+  margin: 0 auto;
+}
+
+.destinations-page > div {
+  grid-row: 2;
+}
+
+.destination-tabs > li > button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: hsl(var(--clr-white));
+}
+
+.destination-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.destinations {
+  margin: 1rem;
+}
+
+.content-wrapper {
+  display: grid;
+}
+
+.destination-content-container {
+  display: grid;
+  grid-row: 2;
+}
+
+@media (max-width: 768px) {
+  .destinations-page {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
+}
+
+@media (min-width: 48rem) {
+  .destinations-page {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media (min-width: 80rem) {
+  .destinations-page {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
+}

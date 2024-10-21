@@ -126,6 +126,21 @@ select {
   max-width: 80rem;
 }
 
+.page-container {
+  display: grid;
+  grid-template-rows: 0.25fr 1fr;
+  height: 100vh;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.number-span {
+  font-weight: 700;
+  margin-right: 0.5em;
+  color: hsl(var(--clr-white) / 0.5);
+  font-family: var(--ff-sans-cond);
+}
+
 .d-block {
   display: block;
 }
@@ -172,6 +187,14 @@ select {
 
 .ff-sans-normal {
   font-family: var(--ff-sans-normal);
+}
+
+.letter-spacing-1 {
+  letter-spacing: 2px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 4px;
 }
 
 .uppercase {
