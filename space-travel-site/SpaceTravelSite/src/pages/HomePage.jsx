@@ -23,7 +23,7 @@ export const HomePage = () => {
             experience! Explore
           </p>
         </div>
-        <div className="">
+        <div className="button-wrapper">
           <LargeButton />
         </div>
       </div>

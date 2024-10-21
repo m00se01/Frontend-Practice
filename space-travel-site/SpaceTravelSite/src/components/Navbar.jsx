@@ -8,8 +8,6 @@ import { useState } from "react";
 export const Navbar = ({ currActive }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [navigationType, setNavigationType] = useState("primary-navigation");
-
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
