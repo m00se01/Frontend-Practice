@@ -1,6 +1,6 @@
 .destinations-page {
   display: grid;
-  grid-template-rows: 0.25fr 1fr;
+  grid-template-rows: 0.1fr 1fr;
   background-size: cover;
   background-position: center left;
   margin: 0 auto;
@@ -10,34 +10,96 @@
   grid-row: 2;
 }
 
+.destination-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 8px;
+}
+
 .destination-tabs > li > button {
   cursor: pointer;
   background: none;
   border: none;
-  color: hsl(var(--clr-white));
+  color: hsl(var(--clr-light));
+}
+
+.active-tab {
+  border-bottom: 2px solid hsl(var(--clr-white));
 }
 
 .destination-info {
   padding: 1rem;
   text-align: center;
+  margin: 0 auto;
 }
 
-.destinations {
+.destination-img {
   margin: 1rem;
 }
 
-.content-wrapper {
-  display: grid;
+.destinations-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .destination-content-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   grid-row: 2;
+  border: 4px solid pink;
 }
 
-@media (max-width: 768px) {
+.divider-line {
+  background-color: white;
+  width: 100%;
+  height: 1px;
+  margin-top: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 780px) {
   .destinations-page {
     background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
+
+  .destination-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .destination-img img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .destination-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2px;
+  }
+
+  .planet-data {
+    margin-top: 1.5rem;
+  }
+
+  .planet-data > div > h4 {
+    color: hsl(var(--clr-light));
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .destination-tabs > li > button {
+    font-size: var(--fs-400);
   }
 }
 
@@ -45,10 +107,59 @@
   .destinations-page {
     background-image: url("../assets/destination/background-destination-tablet.jpg");
   }
+
+  .destinations-wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 0.5fr 5fr;
+    place-items: center;
+  }
+
+  .destination-img img {
+    width: 300px;
+    height: 300px;
+    margin: 4rem;
+  }
+
+  .destinations-wrapper h1 {
+    grid-row: 1;
+    grid-column: 1/5;
+    margin-left: 2rem;
+  }
+
+  .destination-content {
+    grid-row: 2;
+    grid-column: 2/ 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+  }
+
+  .destination-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .planet-data {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    gap: 5rem;
+  }
 }
 
 @media (min-width: 80rem) {
   .destinations-page {
     background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
+
+  .destinations-wrapper {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 0.5fr 5fr;
+    place-items: center;
   }
 }
