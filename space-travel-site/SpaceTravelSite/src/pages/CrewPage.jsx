@@ -1,12 +1,15 @@
+import { CrewDetails } from "../components/CrewDetails";
 import { Navbar } from "../components/Navbar";
+import "../styles/crew.css";
 
 export const CrewPage = () => {
   return (
-    <div>
+    <div className="crew-page">
       <header>
         <Navbar currActive={"crew"} />
       </header>
-      <h1>CrewPage</h1>
+
+      <CrewDetails />
     </div>
   );
 };
