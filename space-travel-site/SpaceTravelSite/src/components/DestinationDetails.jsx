@@ -39,7 +39,7 @@ function DestinationDetails() {
           />
         </div>
 
-        <div className="border destination-info">
+        <div className=" destination-info">
           <ul className="destination-tabs uppercase fs-500 ff-sans-cond letter-spacing-1">
             <li className={currDestination === 0 ? "active-tab" : ""}>
               <button onClick={() => changeDestination("moon")}>Moon</button>
