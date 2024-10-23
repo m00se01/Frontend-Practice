@@ -122,14 +122,6 @@
     max-width: 271px;
     border-radius: 1rem;
   }
-  /* 
-  .carousel-img img {
-    height: 350px;
-    min-height: 350px;
-    max-height: 350px;
-    min-width: 271px;
-    max-width: 271px;
-  } */
 }
 
 @media (min-width: 48rem) {
@@ -180,8 +172,70 @@
   }
 }
 
-@media (max-width: 80rem) {
+@media (min-width: 80rem) {
   .crew-page {
     background-image: url("../assets/crew/background-crew-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-template-rows: 10% 90%;
+    height: 100vh;
+  }
+
+  .crew-details-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10% 90%;
+    place-items: center;
+    grid-row: 2/3;
+  }
+
+  .crew-details-container header {
+    grid-column: 2/4;
+    grid-row: 1;
+  }
+
+  .crew-content-wrapper {
+    position: relative;
+    grid-column: 2/12;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    gap: 8rem;
+    padding: 1rem;
+  }
+
+  .crew-role {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .crew-role span {
+    margin-bottom: 0.5rem;
+  }
+
+  .crew-member-description {
+    display: block;
+    text-align: start;
+  }
+
+  .carousel-btns {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .carousel-btns > button {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .carousel-img {
+    min-height: 35rem;
+    max-height: 35rem;
+    min-width: 28rem;
+    max-width: 28rem;
   }
 }

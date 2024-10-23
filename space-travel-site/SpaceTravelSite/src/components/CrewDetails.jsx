@@ -19,32 +19,34 @@ export const CrewDetails = () => {
       </header>
 
       <div className=" crew-content-wrapper ">
-        <h2 className="uppercase text-white crew-role">
-          <span className="d-block fs-300 ">{crew[currMember].role}</span>
-          {crew[0].name}
-        </h2>
+        <div className="left-half-desktop">
+          <h2 className="uppercase text-white crew-role fs-600 ">
+            <span className="d-block fs-400 ">{crew[currMember].role}</span>
+            {crew[0].name}
+          </h2>
 
-        <div className="crew-member-description ff-sans-normal fs-400 text-accent ">
-          <p>{crew[currMember].bio}</p>
-        </div>
+          <div className="crew-member-description ff-sans-normal fs-400 text-accent  ">
+            <p>{crew[currMember].bio}</p>
+          </div>
 
-        <div className="carousel-btns  ">
-          <button
-            onClick={() => changeCrewMember(0)}
-            className={currMember == 0 ? "active-btn" : ""}
-          ></button>
-          <button
-            onClick={() => changeCrewMember(1)}
-            className={currMember == 1 ? "active-btn" : ""}
-          ></button>
-          <button
-            onClick={() => changeCrewMember(2)}
-            className={currMember == 2 ? "active-btn" : ""}
-          ></button>
-          <button
-            onClick={() => changeCrewMember(3)}
-            className={currMember == 3 ? "active-btn" : ""}
-          ></button>
+          <div className="carousel-btns  ">
+            <button
+              onClick={() => changeCrewMember(0)}
+              className={currMember == 0 ? "active-btn" : ""}
+            ></button>
+            <button
+              onClick={() => changeCrewMember(1)}
+              className={currMember == 1 ? "active-btn" : ""}
+            ></button>
+            <button
+              onClick={() => changeCrewMember(2)}
+              className={currMember == 2 ? "active-btn" : ""}
+            ></button>
+            <button
+              onClick={() => changeCrewMember(3)}
+              className={currMember == 3 ? "active-btn" : ""}
+            ></button>
+          </div>
         </div>
 
         <div
