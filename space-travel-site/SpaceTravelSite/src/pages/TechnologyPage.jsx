@@ -1,12 +1,14 @@
 import { Navbar } from "../components/Navbar";
+import { TechDetails } from "../components/TechDetails";
 
 export const TechnologyPage = () => {
   return (
-    <div>
+    <div className="tech-page">
       <header>
         <Navbar currActive={"technology"} />
       </header>
-      <h1>TechnologyPage</h1>
+
+      <TechDetails />
     </div>
   );
 };

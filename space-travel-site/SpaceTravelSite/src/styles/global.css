@@ -235,12 +235,6 @@ select {
 
 /* Spacing */
 
-/* Selecting everything that's not the first child */
-.flow > *:where(:not(:first-child)) {
-  margin-top: var(--flow-space, 1rem);
-  outline: 1px solid red;
-}
-
 .underline-indicators > * {
   cursor: pointer;
   padding: var(--underline-gap, 1rem) 0;
