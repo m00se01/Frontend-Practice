@@ -5,28 +5,40 @@
   background-position: center;
 }
 
-.tech-btns button {
+.tech-btns > button {
   display: grid;
-  width: 1rem;
-  height: 1rem;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
   background-color: hsl(var(--clr-dark));
   color: hsl(var(--clr-white));
   border-radius: 50%;
+  border: 1px solid hsl(var(--clr-white) / 0.3);
+  cursor: pointer;
 }
 
+.tech-btns > button:hover,
+.tech-btns > button.active-tech {
+  background-color: white;
+  color: hsl(var(--clr-dark));
+}
+
+.tech-img {
+  margin: 1rem 0;
+}
+
+.tech-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+/* Mobile  */
 @media (max-width: 780px) {
   .tech-page {
     background-image: url("../assets/technology/background-technology-mobile.jpg");
-    display: grid;
-    grid-template-rows: 0.25fr 2fr;
-  }
-
-  .landscape img {
-    display: block;
-  }
-
-  .hidden img {
-    display: none;
   }
 
   .tech-details-container {
@@ -35,6 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5rem;
     /* grid-template-columns: repeat(4, 1fr); */
     /* grid-template-rows: 1fr 1fr; */
   }
@@ -48,42 +61,55 @@
 
   .tech-description {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 1rem 3rem;
     min-height: 163px;
   }
 
-  .tech-description span {
-  }
-
-  .portrait img {
-    display: none;
+  .tech-description p {
+    margin-top: 1rem;
   }
 }
 
+/* Tablet */
 @media (min-width: 48rem) {
   .tech-page {
     background-image: url("../assets/technology/background-technology-tablet.jpg");
+    background-position: top center;
+    background-size: cover;
   }
 
   .tech-details-container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 10% 90%;
-    grid-row: 2/3;
-    margin: 0 5rem;
+    grid-template-rows: 0.25fr 0.5fr 0.8fr;
     align-items: center;
+    justify-items: center;
   }
 
-  .tech-details-container header {
-    grid-column: 1/5;
-    grid-row: 1;
+  .tech-img {
+    grid-column: 1 / 9;
+    justify-self: stretch;
+    align-self: stretch;
+    grid-row: 2;
+    height: 357px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .tech-img img {
+    position: absolute;
+    left: 5px;
+    width: 100%;
+    height: 100%;
   }
 
   .tech-content-wrapper {
     grid-column: 2/8;
-    grid-row: 2;
+    grid-row: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,89 +117,65 @@
     margin-top: 1rem;
   }
 
-  .tech-member-description {
+  .tech-details-container > h1 {
+    grid-column: 2/4;
+    grid-row: 1;
+  }
+
+  .tech-description {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 163px;
+    text-align: center;
+    margin: 2.5rem auto;
   }
 
-  .carousel-btns {
-    margin-bottom: 2rem;
-  }
-
-  .carousel-img {
-    min-height: 25rem;
-    max-height: 25rem;
-    min-width: 20rem;
-    max-width: 20rem;
+  .tech-description p {
+    text-align: center;
   }
 }
 
+/* Desktop */
 @media (min-width: 80rem) {
   .tech-page {
     background-image: url("../assets/technology/background-technology-desktop.jpg");
     background-position: center;
     background-size: cover;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 0.25fr 1fr;
     height: 100vh;
   }
 
   .tech-details-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 10% 90%;
     place-items: center;
-    grid-row: 2/3;
-  }
-
-  .tech-details-container header {
-    grid-column: 2/4;
-    grid-row: 1;
+    grid-row: 2;
   }
 
   .tech-content-wrapper {
     position: relative;
-    grid-column: 2/12;
+    grid-column: 2/7;
     grid-row: 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: space-between;
-    gap: 8rem;
     padding: 1rem;
   }
 
-  .tech-role {
+  .tech-content-wrapper > div {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .tech-btns {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
   }
 
-  .tech-role span {
-    margin-bottom: 0.5rem;
-  }
-
-  .tech-member-description {
-    display: block;
-    text-align: start;
-  }
-
-  .carousel-btns {
-    position: absolute;
-    bottom: 0;
-  }
-
-  .carousel-btns > button {
-    width: 1rem;
-    height: 1rem;
-  }
-
-  .carousel-img {
-    min-height: 35rem;
-    max-height: 35rem;
-    min-width: 28rem;
-    max-width: 28rem;
+  .tech-img {
+    grid-column: 8/13;
+    height: 100%;
   }
 }
