@@ -12,7 +12,7 @@ export const CrewDetails = () => {
   return (
     <div className="crew-details-container   ">
       <header>
-        <h1 className="uppercase ff-sans-cond letter-spacing-2 text-white fs-400 ">
+        <h1 className="uppercase ff-sans-cond letter-spacing-2 text-white fs-500 ">
           <span className="number-span letter-spacing-2">02</span> Meet your
           crew
         </h1>

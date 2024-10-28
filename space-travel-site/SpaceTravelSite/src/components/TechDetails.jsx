@@ -19,7 +19,7 @@ export const TechDetails = () => {
 
   return (
     <div className="tech-details-container">
-      <h1 className="page-heading uppercase ff-sans-cond letter-spacing-2 text-white fs-400 ">
+      <h1 className="page-heading uppercase ff-sans-cond letter-spacing-2 text-white fs-500 ">
         <span className="number-span letter-spacing-2">03</span>
         Space Launch 101
       </h1>
@@ -72,7 +72,7 @@ export const TechDetails = () => {
           </div>
 
           <div className="tech-description">
-            <h2 className="fs-600 text-white ff-serif uppercase">
+            <h2 className="fs-700 text-white ff-serif uppercase">
               <span className="d-block fs-400 text-accent ff-serif uppercase">
                 The Terminology...
               </span>
