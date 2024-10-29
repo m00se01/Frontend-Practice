@@ -36,7 +36,7 @@
 }
 
 /* Mobile  */
-@media (max-width: 780px) {
+@media (min-width: 23rem) {
   .tech-page {
     background-image: url("../assets/technology/background-technology-mobile.jpg");
   }
@@ -118,8 +118,7 @@
   }
 
   .tech-details-container > h1 {
-    grid-column: 2/4;
-    grid-row: 1;
+    grid-column: 1/5;
   }
 
   .tech-description {
@@ -145,10 +144,14 @@
     height: 100vh;
   }
 
+  .tech-details-container > h1 {
+    grid-column: 2/5;
+  }
+
   .tech-details-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 0.25fr 1fr 2fr 1fr;
+    grid-template-rows: 0.25fr 1fr 3fr;
   }
 
   .tech-content-wrapper {
@@ -192,7 +195,8 @@
   .tech-img {
     grid-column: 8/13;
     margin: 0;
-    grid-row: 2/5;
-    height: 100%;
+    grid-row: 2/4;
+    min-height: 37.5rem;
+    max-width: 38rem;
   }
 }

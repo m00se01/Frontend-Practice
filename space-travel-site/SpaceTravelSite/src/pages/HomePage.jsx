@@ -10,7 +10,7 @@ export const HomePage = () => {
         <Navbar currActive={"home"} />
       </header>
 
-      <div className="grid-container ">
+      <div className="home-content-wrapper">
         <div className="main-text">
           <h1 className="uppercase text-accent fs-500 ff-sans-cond letter-spacing-1">
             So, you want to travel to

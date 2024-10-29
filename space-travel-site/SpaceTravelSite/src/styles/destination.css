@@ -65,7 +65,7 @@
 }
 
 /* Mobile */
-@media (max-width: 780px) {
+@media (min-width: 23rem) {
   .destinations-page {
     background-image: url("../assets/destination/background-destination-mobile.jpg");
   }
@@ -75,6 +75,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 1rem;
   }
 
   .destination-img img {
@@ -116,7 +117,7 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 0.5fr 5fr;
-    place-items: center;
+    /* place-items: center; */
   }
 
   .destination-img img {
@@ -127,7 +128,7 @@
 
   .destinations-wrapper h1 {
     grid-row: 1;
-    grid-column: 1/5;
+    grid-column: 1/6;
     margin-left: 2rem;
   }
 
